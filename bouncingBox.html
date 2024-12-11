@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <style>
+        div {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            position: absolute;
+            top: 400px;
+            left: 100px;
+            bottom: -400px;
+            right:  -100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+
+</body>
+
+</html>
+<script>
+    var x = 100
+    var directionX = 5
+    var directionY =-5
+    var y= 100
+    //if box is clicked it should move over 5px
+    document.getElementById("box").addEventListener("click", moveBox)
+    setInterval(moveBox, 16)
+
+    function moveBox() {
+        //increase position by 5
+        document.getElementById("box").style.left = x + "px"
+        x = x + directionX
+        //if box position is greater than 1500px change direction
+        if(x>1900){
+            directionX = -5
+        } 
+        if(x<0){
+        directionX = 5
+        }
+        document.getElementById("box").style.top = y + "px"
+        y = y + directionY
+        if(y>950){
+            directionY = -5
+
+        }
+        if(y<0){
+            directionY = 5
+        }
+    }
+
+</script>
