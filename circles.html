@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+<canvas id="canvas" width="4000" Height="2000"></canvas>
+</body>
+</html>
+<script>
+    var directionX =[]
+    var directionY =[]
+    var directionX =[]
+    var directionY =[]
+    var c =document.getElementById("canvas")
+    var ctx = c.getContext("2d");
+    setInterval(main,50)
+    for(var i=0; i<1000; i=i+1) {
+        positionX[i] = Math.random()
+        positionY[i] = Math.random()
+        directionX[i] = Math.random()
+        directionY[i] = Math.random()
+    }
+    function main() {
+        ctx.clearRect(0, 0, 2000, 1000)
+
+        for(var i = 0; i<1000; i=i+1)
+        positionX[i] = positionX[i] + directionX[i]
+        positionY[i] = positionY[i] + directionY[i]
+
+        
+    }
+</script>
