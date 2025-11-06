@@ -69,7 +69,7 @@ $(document).ready(function () {
   function handleBad(data, repeat) {
     repeat = repeat + 1
     setBackgroundWithMixed(data, repeat)
-    animationDetails = 3
+    animationDetails.displyType = 3
   }
 
   /////////////////////////////////////////////////
